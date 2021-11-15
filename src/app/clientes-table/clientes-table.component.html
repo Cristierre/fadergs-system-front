@@ -1,0 +1,40 @@
+<table mat-table [dataSource]="(clientes|async)" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="data_nascimento">
+        <th mat-header-cell *matHeaderCellDef> Data Nacimento </th>
+        <td mat-cell *matCellDef="let element"> {{element.data_nascimento}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="genero">
+        <th mat-header-cell *matHeaderCellDef> Genero </th>
+        <td mat-cell *matCellDef="let element"> {{element.genero}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="rg">
+        <th mat-header-cell *matHeaderCellDef> RG </th>
+        <td mat-cell *matCellDef="let element"> {{element.rg}}
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cpf">
+        <th mat-header-cell *matHeaderCellDef> CPF </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.cpf}}
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="celular">
+        <th mat-header-cell *matHeaderCellDef> Celular </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.celular}}
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
