@@ -9,12 +9,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientesTableComponent } from './clientes-table/clientes-table.component';
 import { RoomsTableComponent } from './rooms-table/rooms-table.component';
 import {MatTableModule} from '@angular/material/table';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientesTableComponent,
-    RoomsTableComponent
+    RoomsTableComponent,
+    LoginComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -22,8 +27,9 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
     MatTabsModule,
     MatTableModule,
-    MatIconModule  
-   
+    MatIconModule,
+    ReactiveFormsModule  
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

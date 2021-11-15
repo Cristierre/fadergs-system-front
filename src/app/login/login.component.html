@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <form class="form-signin" [formGroup]="group" (ngSubmit)="onSubmit()">       
+      <h2 class="form-signin-heading">Login Hotel</h2>
+      <input type="text" class="form-control" name="username" formControlName="user_name" placeholder="E-mail" required="" autofocus="" />
+      <input type="password" class="form-control" name="password" formControlName="password" placeholder="Senha" required=""/>      
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!group.valid">Login</button>   
+    </form>
+  </div>
