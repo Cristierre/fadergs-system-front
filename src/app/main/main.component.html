@@ -8,10 +8,10 @@
   </nav>
   
   <mat-tab-group animationDuration = "0ms">
-    <mat-tab label="Quartos"> 
+    <mat-tab label="Quartos" *ngIf="visualizarQuartos()"> 
       <app-rooms-table></app-rooms-table>
     </mat-tab>
-    <mat-tab label="Clientes">
+    <mat-tab label="Clientes" *ngIf="visualizarClientes()">
       <app-clientes-table></app-clientes-table>
     </mat-tab>
   </mat-tab-group>

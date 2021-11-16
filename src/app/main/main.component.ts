@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
   }
 
+  visualizarQuartos(){
+    return this.authService.isGerente() || this.authService.isCliente() ;
+  }
+  
+  visualizarClientes(){
+    return this.authService.isGerente();
+  }
 }
